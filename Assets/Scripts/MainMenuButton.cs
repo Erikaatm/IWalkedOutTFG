@@ -7,6 +7,8 @@ public class MainMenuButton : MonoBehaviour
     {
         Time.timeScale = 1f;
         PauseController.SetPause(false);
+        if (MenuController.Instance != null)
+            MenuController.Instance.menuCanvas.SetActive(false);
         SceneManager.LoadScene(0);
     }
 }

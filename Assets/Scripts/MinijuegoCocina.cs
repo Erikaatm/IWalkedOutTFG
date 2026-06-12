@@ -19,6 +19,9 @@ public class MinijuegoCocina : MonoBehaviour
     public AudioClip sonidoIncorrecto;
     public AudioSource audioResultado;
 
+    private bool dialogoTerminado = false;
+    public bool DialogoTerminado() { return dialogoTerminado; }
+
     private List<int> ordenMetido = new List<int>();
     private int[] ordenCorrecto = { 1, 2, 3, 4, 5, 6 };
     private Vector3[] posicionesOriginales;
@@ -27,9 +30,21 @@ public class MinijuegoCocina : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(transform.root.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
+    private void OnDestroy()
+    {
+        Debug.Log("MinijuegoCocina DESTRUIDO");
+    }
 
     private void Start()
     {
@@ -47,6 +62,8 @@ public class MinijuegoCocina : MonoBehaviour
 
     public void Abrir()
     {
+        if (panel == null || fondoOscuro == null) return;
+        PauseController.SetPause(true);
         panel.SetActive(true);
         fondoOscuro.SetActive(true);
         Time.timeScale = 0f;
@@ -59,14 +76,15 @@ public class MinijuegoCocina : MonoBehaviour
 
     public void Cerrar()
     {
+        PauseController.SetPause(false);
         panel.SetActive(false);
         fondoOscuro.SetActive(false);
         Time.timeScale = 1f;
     }
 
     public bool EstaAbierto() 
-    { 
-        return panel.activeSelf; 
+    {
+        return panel != null && panel.activeSelf;
     }
 
     void LimpiarSlots()
@@ -178,27 +196,21 @@ public class MinijuegoCocina : MonoBehaviour
         resultadoCorrecto.SetActive(false);
         Cerrar();
 
-        // Muestra los textos iniciales uno a uno
         for (int i = 0; i < dialogoAlAcertar.textosIniciales.Length; i++)
         {
             DialogueController.Instance.ShowText(dialogoAlAcertar.textosIniciales[i]);
-
-            // Espera a que el jugador pulse E
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.E));
-
-            // Si estaba escribiendo, completa el texto
             if (DialogueController.Instance.escribiendo)
             {
                 DialogueController.Instance.CompletarOAvanzar();
-                // Espera otro E para avanzar
                 yield return null;
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.E));
             }
-
             yield return null;
         }
 
-        // Muestra las opciones
+        PlayerInteraction.bloqueado = true; // bloquea la E antes de mostrar opciones
+
         System.Action[] acciones = new System.Action[dialogoAlAcertar.opciones.Length];
         for (int i = 0; i < acciones.Length; i++)
         {
@@ -230,6 +242,9 @@ public class MinijuegoCocina : MonoBehaviour
             }
             yield return null;
         }
+
         DialogueController.Instance.CloseDialogue();
+        PlayerInteraction.bloqueado = false;
+        dialogoTerminado = true;
     }
 }

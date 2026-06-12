@@ -6,8 +6,6 @@ public class PuertaInteractuable : MonoBehaviour, IInteractable
 {
     public string escenaDestino;
     public int interactuableID;
-    public GameObject blackPanel;
-
     private Animator animator;
 
     void Start()
@@ -24,31 +22,26 @@ public class PuertaInteractuable : MonoBehaviour, IInteractable
         {
             save.MarcarInterrogacionDesactivada(interactuableID);
             save.SaveGame();
-            Debug.Log("Guardado. Interrogaciones: " + save.interrogacionesDesactivadas.Count);
         }
-        else
-        {
-            Debug.Log("SaveController no encontrado");
-        }
-
         Transform interrogacion = transform.Find("interrogacion");
         if (interrogacion != null) interrogacion.gameObject.SetActive(false);
-
         StartCoroutine(AbrirYCargar());
     }
 
-
     IEnumerator AbrirYCargar()
     {
-        animator.SetTrigger("Abrir");
+        CanvasUI canvasUI = FindObjectOfType<CanvasUI>();
+        if (canvasUI == null) yield break;
+
+        if (animator != null) animator.SetTrigger("Abrir");
         yield return new WaitForSeconds(0.8f);
 
-        // Fade a negro
-        UnityEngine.UI.Image fondo = blackPanel.GetComponent<UnityEngine.UI.Image>();
+        GameObject panel = canvasUI.blackPanel;
+        UnityEngine.UI.Image fondo = panel.GetComponent<UnityEngine.UI.Image>();
         Color color = fondo.color;
         color.a = 0f;
         fondo.color = color;
-        blackPanel.SetActive(true);
+        panel.SetActive(true);
 
         while (color.a < 1f)
         {

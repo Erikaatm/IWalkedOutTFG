@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoMinijuego
   textosIniciales:
   - "Toqu\xE9 la canci\xF3n entera. - Me qued\xE9 mirando el piano sin poder mover
-    las manos. - Era suya, de mi padre. La hab\xEDa escuhado cientos de veces desde
+    las manos. - Era suya, de mi padre. La hab\xEDa escuchado cientos de veces desde
     la puerta del sal\xF3n, sin entrar. Creyendo que solo estaba ensayando para su
     dichoso trabajo. "
-  - "Hab\xEDa una partitura encima del piano, con mi nombre. La \xFAlltima p\xE1gina
-    estaba en blanco. - Se me encongi\xF3 el est\xF3mago como nunca antes. - Era
-    para mi. Despu\xE9s de tanto tiempo creer que yo no le importaba.  "
-  - "Trabajaba d\xEDa y noche en aquella melod\xEDa, solo apra que yo la disfrutara. "
+  - "Hab\xEDa una partitura encima del piano, con mi nombre. La \xFAltima p\xE1gina
+    estaba en blanco. - Se me encogi\xF3 el est\xF3mago como nunca antes. - Era para
+    m\xED. Despu\xE9s de tanto tiempo creer que yo no le importaba.  "
+  - "Trabajaba d\xEDa y noche en aquella melod\xEDa, solo para que yo la disfrutara. "
   - "Nunca entr\xE9. En todos esos a\xF1os, nunca entr\xE9. Y ahora estoy aqu\xED,
     tocando su canci\xF3n incompleta, en un sitio que no existe, para nadie, salvo
-    para mi. Ojal\xE1 pudiera retroceder en el tiempo..."
+    para m\xED. Ojal\xE1 pudiera retroceder en el tiempo..."
   - "\xBFPor qu\xE9 nunca entr\xE9 a escucharle?"
   opciones:
   - Era demasiado orgulloso.
@@ -37,7 +37,7 @@ MonoBehaviour:
     - "Como cuando era peque\xF1o y \xE9l tocaba y yo me quedaba en el sal\xF3n solo
       para estar cerca. Pero creci\xF3 la distancia. Y los ensayos. Y los viajes.
       Y yo crec\xED tambi\xE9n y dej\xE9 de quedarme en el sal\xF3n. Y \xE9l sigui\xF3
-      tocando. Y ninguno de los dos dijo nada. W"
+      tocando. Y ninguno de los dos dijo nada."
     - Y ahora no puedo dejar de pensar en todas las veces que pude haber entrado.
     valorPulso: 2
   - textos:

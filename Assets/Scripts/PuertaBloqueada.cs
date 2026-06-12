@@ -14,7 +14,7 @@ public class PuertaBloqueada : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        Transform interrogacion = transform.Find("Interrogacion");
+        Transform interrogacion = transform.Find("interrogacion");
         if (interrogacion != null) interrogacion.gameObject.SetActive(false);
 
         SaveController save = FindObjectOfType<SaveController>();

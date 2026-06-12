@@ -29,7 +29,15 @@ public class MinijuegoPiano : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(transform.root.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Start()
@@ -44,7 +52,8 @@ public class MinijuegoPiano : MonoBehaviour
 
     public void Abrir()
     {
-        bloqueado = false;
+        if (panel == null || fondoOscuro == null) return;
+        PauseController.SetPause(true);
         panel.SetActive(true);
         fondoOscuro.SetActive(true);
         Time.timeScale = 0f;
@@ -57,6 +66,7 @@ public class MinijuegoPiano : MonoBehaviour
 
     public void Cerrar()
     {
+        PauseController.SetPause(false);
         panel.SetActive(false);
         fondoOscuro.SetActive(false);
         Time.timeScale = 1f;
@@ -65,7 +75,7 @@ public class MinijuegoPiano : MonoBehaviour
 
     public bool EstaAbierto()
     {
-        return panel.activeSelf;
+        return panel != null && panel.activeSelf;
     }
 
     public bool EstaResuelto()
@@ -162,31 +172,29 @@ public class MinijuegoPiano : MonoBehaviour
 
     IEnumerator MostrarDialogoFinal()
     {
-        yield return new WaitForSecondsRealtime(10f);
+        PlayerInteraction.bloqueado = true;
+
+        yield return new WaitForSecondsRealtime(1.5f + 16 * 0.4f);
         resultadoCorrecto.SetActive(false);
         Cerrar();
 
-        // Muestra los textos iniciales uno a uno
+        PlayerInteraction.bloqueado = false;
+
         for (int i = 0; i < dialogoAlAcertar.textosIniciales.Length; i++)
         {
             DialogueController.Instance.ShowText(dialogoAlAcertar.textosIniciales[i]);
-
-            // Espera a que el jugador pulse E
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.E));
-
-            // Si estaba escribiendo, completa el texto
             if (DialogueController.Instance.escribiendo)
             {
                 DialogueController.Instance.CompletarOAvanzar();
-                // Espera otro E para avanzar
                 yield return null;
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.E));
             }
-
             yield return null;
         }
 
-        // Muestra las opciones
+        PlayerInteraction.bloqueado = true; // bloquea la E antes de mostrar opciones
+
         System.Action[] acciones = new System.Action[dialogoAlAcertar.opciones.Length];
         for (int i = 0; i < acciones.Length; i++)
         {
@@ -219,6 +227,7 @@ public class MinijuegoPiano : MonoBehaviour
             yield return null;
         }
         DialogueController.Instance.CloseDialogue();
+        PlayerInteraction.bloqueado = false;
         dialogoTerminado = true;
     }
 

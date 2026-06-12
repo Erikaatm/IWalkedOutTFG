@@ -992,7 +992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &825844122
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2510,6 +2510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MusicaFondo
   musicaFondo: {fileID: 8300000, guid: 6650c5435b82972498e8781c9b0003e7, type: 3}
   volumen: 0.2
+  duracionFade: 1.5
 --- !u!82 &1681816660
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2873,7 +2874,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1746935305
 Canvas:
   m_ObjectHideFlags: 0

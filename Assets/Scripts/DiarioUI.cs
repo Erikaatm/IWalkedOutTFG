@@ -41,11 +41,14 @@ public class DiarioUI : MonoBehaviour
         panelDiario.SetActive(abierto);
         if (abierto)
         {
+            PauseController.SetPause(true);
             Time.timeScale = 0f;
+            ActualizarTabs();
             MostrarEntradas(escenaActual);
         }
         else
         {
+            PauseController.SetPause(false);
             Time.timeScale = 1f;
         }
     }

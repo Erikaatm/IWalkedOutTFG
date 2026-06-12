@@ -17,14 +17,15 @@ public class FadeEntrada : MonoBehaviour
     IEnumerator FadeIn()
     {
         blackPanel.gameObject.SetActive(true);
-
         yield return new WaitForSeconds(0.1f);
-
         Color color = blackPanel.color;
         color.a = 1f;
         blackPanel.color = color;
 
-        if (musicaFondo != null)
+        // Solo baja el volumen si la música no está sonando ya
+        bool musicaYaSonando = musicaFondo != null && musicaFondo.isPlaying && musicaFondo.volume > 0.1f;
+
+        if (musicaFondo != null && !musicaYaSonando)
             musicaFondo.volume = 0f;
 
         yield return null;
@@ -36,10 +37,8 @@ public class FadeEntrada : MonoBehaviour
             t += Time.deltaTime * 0.8f / duracionFade;
             color.a = Mathf.Lerp(1f, 0f, t);
             blackPanel.color = color;
-
-            if (musicaFondo != null)
+            if (musicaFondo != null && !musicaYaSonando)
                 musicaFondo.volume = Mathf.Lerp(0f, 0.5f, t);
-
             yield return null;
         }
 

@@ -22,6 +22,6 @@ public class EntradaUI : MonoBehaviour
             marco.sprite = entrada.esPista ? spritePista : spriteNormal;
 
         GetComponent<Button>().onClick.AddListener(() =>
-            PopupRecuerdo.Instance.Mostrar(datos.titulo, datos.descripcion, datos.imagen));
+        PopupRecuerdo.Instance.Mostrar(datos.titulo, datos.descripcion, datos.imagen, true));
     }
 }

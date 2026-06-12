@@ -23,6 +23,7 @@ public class EscenaFinal : MonoBehaviour
 
     IEnumerator IniciarFinal()
     {
+        
         // Fade de entrada del audio
         monitorAudio.volume = 0f;
 
@@ -60,9 +61,14 @@ public class EscenaFinal : MonoBehaviour
         if (ojosEcho != null)
         {
             if (roto > claro && roto > quieto)
-                ojosEcho.SetActive(true);
+            {
+                ojosEcho.SetActive(false); // Roto — ojos cerrados, no abre
+            }
             else
-                ojosEcho.SetActive(false);
+            {
+                ojosEcho.SetActive(true); // Claro/Quieto — ojos cerrados al inicio
+                StartCoroutine(AbrirOjos());
+            }
         }
 
         foreach (string texto in dialogoElegido.textosIniciales)
@@ -100,5 +106,11 @@ public class EscenaFinal : MonoBehaviour
 
         yield return new WaitForSeconds(0.3f);
         SceneManager.LoadScene("Creditos");
+    }
+
+    IEnumerator AbrirOjos()
+    {
+        yield return new WaitForSeconds(5f);
+        if (ojosEcho != null) ojosEcho.SetActive(false); // desactiva — abre los ojos
     }
 }
