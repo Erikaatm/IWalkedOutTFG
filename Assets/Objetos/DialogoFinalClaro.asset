@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59302fabf3d910341ae0edf2a61e915f, type: 3}
+  m_Name: DialogoFinalClaro
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoMinijuego
+  textosIniciales:
+  - "La m\xE1quina sigue pitando. Despacio. Constante. Como siempre.\nLleva d\xEDas
+    as\xED. Semanas. El tiempo en los hospitales tiene una textura distinta \u2014
+    se estira, se encoge, no avisa."
+  - Y entonces, algo cambia.
+  - "Un movimiento peque\xF1o. Una mano que se tensa. Los dedos de Echo que se doblan
+    despacio, como si recordaran c\xF3mo hacerlo."
+  - "Nadie lo ve. No hay nadie en la habitaci\xF3n en este momento."
+  - "Pero la m\xE1quina lo sabe. Y sigue pitando. Y pitando. Y pitando."
+  - Echo abre los ojos.
+  - "La luz es demasiado blanca. El techo es demasiado liso. Todo huele a pl\xE1stico
+    y a fr\xEDo."
+  - "Y aun as\xED - y esto es lo extra\xF1o, lo inesperado, lo que nadie hubiera
+    apostado hace unas semanas - aun as\xED, hay algo que se parece mucho a las ganas
+    de estar aqu\xED."
+  - "No va a ser f\xE1cil. Nunca lo es. Hay huecos que no se cierran, noches que
+    no se deshacen, cosas que ya no se pueden decir."
+  - "Pero esta ma\xF1ana, en esta habitaci\xF3n demasiado blanca, Echo recuerda el
+    pisto de su madre. La melod\xEDa de su padre. El cartel de purpurina de Lua."
+  - "Y en vez de hundirse... sonr\xEDe. Muy poco. Casi nada."
+  - "Pero sonr\xEDe."
+  - Y elige quedarse.
+  opciones: []
+  respuestas: []

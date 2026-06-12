@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59302fabf3d910341ae0edf2a61e915f, type: 3}
+  m_Name: DialogoPadre
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoMinijuego
+  textosIniciales:
+  - "Toqu\xE9 la canci\xF3n entera. - Me qued\xE9 mirando el piano sin poder mover
+    las manos. - Era suya, de mi padre. La hab\xEDa escuhado cientos de veces desde
+    la puerta del sal\xF3n, sin entrar. Creyendo que solo estaba ensayando para su
+    dichoso trabajo. "
+  - "Hab\xEDa una partitura encima del piano, con mi nombre. La \xFAlltima p\xE1gina
+    estaba en blanco. - Se me encongi\xF3 el est\xF3mago como nunca antes. - Era
+    para mi. Despu\xE9s de tanto tiempo creer que yo no le importaba.  "
+  - "Trabajaba d\xEDa y noche en aquella melod\xEDa, solo apra que yo la disfrutara. "
+  - "Nunca entr\xE9. En todos esos a\xF1os, nunca entr\xE9. Y ahora estoy aqu\xED,
+    tocando su canci\xF3n incompleta, en un sitio que no existe, para nadie, salvo
+    para mi. Ojal\xE1 pudiera retroceder en el tiempo..."
+  - "\xBFPor qu\xE9 nunca entr\xE9 a escucharle?"
+  opciones:
+  - Era demasiado orgulloso.
+  - "No sab\xEDa como acercarme a \xE9l."
+  - "Porque nunca supe como decirle que le quer\xEDa."
+  respuestas:
+  - textos:
+    - "- Lo dije y me qued\xE9 callado despu\xE9s. - Siempre pens\xE9 que habr\xEDa
+      otro momento. Que ya habr\xEDa una noche en la que entrar\xEDa, me sentar\xEDa
+      a su lado y simplemente estar\xEDa ah\xED. Sin que hiciera falta decir nada."
+    - "Como cuando era peque\xF1o y \xE9l tocaba y yo me quedaba en el sal\xF3n solo
+      para estar cerca. Pero creci\xF3 la distancia. Y los ensayos. Y los viajes.
+      Y yo crec\xED tambi\xE9n y dej\xE9 de quedarme en el sal\xF3n. Y \xE9l sigui\xF3
+      tocando. Y ninguno de los dos dijo nada. W"
+    - Y ahora no puedo dejar de pensar en todas las veces que pude haber entrado.
+    valorPulso: 2
+  - textos:
+    - "- Me cost\xF3 responder. - Con \xE9l siempre hab\xEDa demasiado silencio entre
+      medias. Demasiadas cosas sin decir que con el tiempo se hicieron demasiado
+      grandes. Y cuando quise acercarme ya no supe por d\xF3nde empezar. Quiz\xE1s
+      \xE9l tampoco. "
+    - "Quiz\xE1s los dos esper\xE1bamos que el otro diera el primer paso. Y ninguno
+      lo dio."
+    valorPulso: 0
+  - textos:
+    - "- Lo dije y me doli\xF3 decirlo. - Con \xE9l nunca supe. Era m\xE1s f\xE1cil
+      quedarse en la puerta que entrar y arriesgarse a que saliera todo. El orgullo,
+      los a\xF1os, la distancia."
+    - "Ojal\xE1 hubiera entrado aunque solo hubiera sido una vez. Me habr\xEDa sentado
+      a su lado en silencio y \xE9l habr\xEDa seguido tocando y habr\xEDa sido suficiente.
+      Solo estar. Solo eso. Y yo lo desperdici\xE9 sin saber que se pod\xEDa acabar."
+    valorPulso: 0

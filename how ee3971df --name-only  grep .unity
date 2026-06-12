@@ -1,0 +1,121 @@
+[33m1cc80d4b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m GameManager activado xd
+[33mee3971df[m okokdivino todo ok
+[33m24651218[m ok
+[33m7d1dbbdc[m Absolutamente todo acabado 100% real no fake
+[33m370dded0[m[33m ([m[1;31morigin/David[m[33m, [m[1;32mDavid[m[33m)[m run de web
+[33m8cb69a59[m Juego 100% Terminado
+[33m6a814a74[m[33m ([m[1;31morigin/Erika[m[33m, [m[1;32mErika[m[33m)[m Terminado
+[33mbf1bd6f6[m TERMINADA LA ESCENA
+[33m04761504[m ya va ya va
+[33mfa68c992[m si
+[33m111fdf3b[m Si
+[33mcb07cf6c[m Dialogos hechos
+[33mc66e6645[m 2 hechos
+[33m41068dce[m Merge branch 'Erika'
+[33m5f338c00[m Logica de dialogos hecha
+[33m40705861[m Reproducción de video hecha
+[33m9d021d15[m Merge branch 'David'
+[33m5621ce4c[m musica controlada y final hecho
+[33m4e9daeb4[m Merge branch 'Erika'
+[33m98f96e20[m Merge branch 'David'
+[33m19b8cf59[m SampleScene parte David Acabada
+[33m8e5d0235[m Termina IntroScene
+[33m9fab0ce4[m Logica portales casi terminada
+[33mdf864d69[m Merge branch 'Erika'
+[33m3aacf65f[m Dialogos terminados, proceso de logica portales
+[33m99781498[m Logica de gemas y portales acabada.
+[33m1e0547a1[m 3 npcs terminados
+[33m42879c90[m Corregidos dialogos casi casi
+[33m83c1a273[m Dialogos
+[33mb5c17327[m objetos acabados
+[33mf9305547[m foto en resumen arreglada FINAL
+[33m7405e8b9[m Merge branch 'Erika'
+[33m2be9229e[m Dialogos casi terminados de Intro scene
+[33mc1d575f2[m foto del resumen también cambia ahora
+[33m9cbc3c25[m animaciones de personaje acabadas FALTA FOTO RESUMEN
+[33mb5b032e7[m Pausa hecha
+[33m26d2af5d[m Merge branch 'Erika'
+[33m6dd9a09a[m Minimapa IntroScene
+[33mb9433f30[m todo seteado del panel de TAB
+[33m13fcdf5b[m Settings hecho
+[33mb64590b5[m Merge branch 'main' into Erika
+[33m22c661c5[m cambio de musica entre escenas hecho.
+[33m023044ed[m Arreglos
+[33m1bd57097[m cargador volumen
+[33m4bb5c1a7[m Merge branch 'main' into David
+[33m47735e2f[m cambios actualizados(?)
+[33mb1ad3f4c[m Merge branch 'Erika'
+[33me047c53c[m Opciones pantalla completa
+[33m9d80c748[m Merge pull request #7 from davidmfloress/David
+[33mc839bcb1[m volumen se guarda solo ahora si de vdd
+[33m6fda3714[m Merge branch 'Erika'
+[33mfc0d7d59[m Build
+[33me24e764c[m Merge pull request #6 from davidmfloress/David
+[33ma789c318[m cambio minimo hotbar
+[33mbb83a159[m controlador volumen hecho
+[33md6a87db3[m audio de pasos, juego, hecho. Medidor volumen a medias
+[33mc4e4eb56[m Juego ya instanciado base todo rechulon a partir de aquí bien
+[33m02623092[m Merge branch 'main' of https://github.com/davidmfloress/ProyectoFinalVideojuegos into David
+[33m15f17c8d[m Revert "push privsional"
+[33m68c5b84f[m Revert "Merge pull request #3 from davidmfloress/David"
+[33m24db98f6[m tab menu completo acabado
+[33mfaa64cf9[m mapa acabado
+[33m2362b034[m objetos y guardado de ellos y zonas de entrega funcionando
+[33md1b20c03[m Item Seleccionable se hace pequeño en hotbar
+[33mb547e1e6[m inventario y hot bar acabados
+[33mf935adea[m Merge pull request #4 from davidmfloress/Erika
+[33m5f8f5f5b[m MiniMapa acabado
+[33m7d93f116[m Merge branch 'main' into Erika
+[33m1e47aede[m Merge pull request #3 from davidmfloress/David
+[33mbba058b8[m inventario funcionando
+[33mdbc67aec[m Merge branch 'main' into Erika
+[33ma4aecc7f[m push privsional
+[33maf8751d7[m Merge branch 'main' into Erika
+[33ma34cc6d7[m inventario a medias
+[33m36d737c7[m si
+[33mdfb676eb[m inventario nose
+[33m04c161b2[m Empezando npcs y terminado mapa y menu principal
+[33m8aa61c86[m Mapa terminado
+[33m26206e51[m mira yo que se
+[33m78104a39[m si
+[33ma65ff58e[m Mapa casi terminado
+[33m5d79cf07[m Merge branch 'main' into David
+[33m8aa9a0b4[m ns
+[33mc6389b9c[m Avance en mapa
+[33m84f17b37[m Slots de inventario
+[33m918553fb[m Merge pull request #2 from davidmfloress/David
+[33m2c6702aa[m Boton guardar en ajustes hecho
+[33md2669492[m Merge pull request #1 from davidmfloress/David
+[33mb25b1224[m a
+[33m7610919d[m Menu y tabla de Jugador
+[33m0e2b2856[m Camara hecha y panel de menú en proceso
+[33mc61c274b[m Avance escenario
+[33m89440ac6[m algunos muebles de la casa y tilepaletes
+[33maefc45b7[m aha
+[33m8a0fe701[m suelos termiandos por completo
+[33m8ce87980[m paredes acabadas
+[33ma73972ff[m paredes a medias
+[33m6582aa00[m Capas hasta collision bien nombradas y creadas
+[33m2e57c437[m Merge branch 'main' of https://github.com/davidmfloress/ProyectoFinalVideojuegos
+[33m698df2fd[m paredes y cositas
+[33mb697ab95[m Esquema mapa
+[33m92fe28ae[m Animacion intro
+[33mb07799b9[m cosas
+[33m2d86e8fc[m Merge branch 'main' of https://github.com/davidmfloress/ProyectoFinalVideojuegos
+[33mebce5b1c[m Intro medio medio
+[33m66c9e1ca[m capas para mapa y animaciones personaje
+[33m0fca554d[m mapa nuevo creo y nose
+[33m8ffd65a1[m cambios a nueva version y player de prueba
+[33m0404273b[m cambios nose
+[33m650bba7d[m Merge branch 'main' of https://github.com/davidmfloress/ProyectoFinalVideojuegos
+[33m42d0537c[m sistema de karma y coger y dejar objetos
+[33ma36050b9[m Menu opciones y creditos hecho
+[33m890fc9f3[m quitadas algunas cosas
+[33mb48bf890[m[33m ([m[1;31morigin/pruebas[m[33m, [m[1;32mpruebas[m[33m)[m Menu Principal y opciones terminado
+[33m9f35406c[m MainMenu y opciones
+[33m06865ab2[m Fonts
+[33m040782c1[m escenario principal
+[33meb29207e[m Trabajo dia lunes 22 diciembre
+[33m1052649f[m Instalación package de input system 2d
+[33m38f85477[m SUBIDA DE PROYECTO
+[33mce9fc904[m Initial commit

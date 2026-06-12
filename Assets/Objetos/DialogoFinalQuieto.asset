@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59302fabf3d910341ae0edf2a61e915f, type: 3}
+  m_Name: DialogoFinalQuieto
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoMinijuego
+  textosIniciales:
+  - "La m\xE1quina sigue pitando. Despacio. Constante. Como siempre.\nLleva d\xEDas
+    as\xED. Semanas. El tiempo en los hospitales tiene una textura distinta \u2014
+    se estira, se encoge, no avisa."
+  - Y entonces, algo cambia.
+  - "Un movimiento peque\xF1o. Una mano que se tensa. Los dedos de Echo que se doblan
+    despacio, como si recordaran c\xF3mo hacerlo."
+  - "Nadie lo ve. No hay nadie en la habitaci\xF3n en este momento."
+  - "Pero la m\xE1quina lo sabe. Y sigue pitando."
+  - Echo abre los ojos.
+  - "La luz es demasiado blanca. El techo es demasiado liso. Todo huele a pl\xE1stico
+    y a fr\xEDo."
+  - "Los m\xE9dicos dicen que es una buena se\xF1al. Que el cuerpo ha decidido seguir.
+    Que ahora toca recuperarse."
+  - "Echo los escucha. Asiente en los momentos correctos. Aprende r\xE1pido lo que
+    se espera de \xE9l."
+  - "Pero por dentro hay algo que no responde. Como si hubiera vuelto a medias \u2014
+    el cuerpo aqu\xED, y algo esencial todav\xEDa perdido entre los recuerdos."
+  - "Recuerda a su madre. A su padre. A Lua. Los recuerdos est\xE1n ah\xED, intactos.
+    Pero al tocarlos no duelen ni consuelan. Solo est\xE1n, como objetos en una habitaci\xF3n
+    que ya no es tuya."
+  - "El dolor desapareci\xF3 en alg\xFAn momento que no supo identificar. Y con \xE9l,
+    sin querer, se fue tambi\xE9n el resto. La pena. La rabia. Las ganas de llorar
+    en la ducha. Las ganas de cualquier cosa."
+  - "La m\xE1quina sigue pitando. Echo sigue respirando. Los d\xEDas pasan."
+  - "Est\xE1 aqu\xED. Pero nadie, ni \xE9l mismo, sabe muy bien desde d\xF3nde."
+  opciones: []
+  respuestas: []

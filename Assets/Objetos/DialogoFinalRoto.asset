@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59302fabf3d910341ae0edf2a61e915f, type: 3}
+  m_Name: DialogoFinalRoto
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoMinijuego
+  textosIniciales:
+  - "La m\xE1quina pita. Despacio. Constante. Como siempre.\n"
+  - "Lleva d\xEDas as\xED. Semanas. El tiempo en los hospitales tiene una textura
+    distinta \u2014 se estira, se encoge, no avisa."
+  - "Echo carg\xF3 con demasiado. Con el peso de una noche que no se puede deshacer,
+    con el silencio de todos los meses que vinieron despu\xE9s, con el hueco enorme
+    que deja la gente que se va sin que puedas despedirte."
+  - "Hay dolores que no tienen nombre. Que no caben en ninguna palabra que exista.
+    Que simplemente est\xE1n ah\xED, ocupando todo el espacio, sin pedir permiso."
+  - Echo tuvo uno de esos. Lo tuvo durante mucho tiempo. Solo.
+  - "El pitido cambia. Se alarga. Se convierte en una sola nota, recta y fr\xEDa,
+    que lo llena todo."
+  - "Los m\xE9dicos entran. Hacen lo que pueden."
+  - Es tarde.
+  - "Hay una silla vac\xEDa al lado de la cama. Hay unas flores secas en la mesilla.
+    Hay una habitaci\xF3n que de repente pesa el doble."
+  - "Y hay un chico de diecisiete a\xF1os que quer\xEDa a su familia, que tuvo miedo,
+    que cometi\xF3 el error de creer que el tiempo siempre vuelve."
+  - "Que nunca supo que aquella noche iba a ser la \xFAltima."
+  - "La l\xEDnea de la m\xE1quina no vuelve a romperse."
+  - "Y la habitaci\xF3n queda en silencio."
+  opciones: []
+  respuestas: []

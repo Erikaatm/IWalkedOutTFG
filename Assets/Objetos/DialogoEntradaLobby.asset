@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59302fabf3d910341ae0edf2a61e915f, type: 3}
+  m_Name: DialogoEntradaLobby
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoMinijuego
+  textosIniciales:
+  - "No s\xE9 qu\xE9 es este sitio. Pero lo reconozco todo. Estas puertas... detr\xE1s
+    de cada una hay un recuerdo. Cosas que intent\xE9 no pensar. Cosas que no pude
+    arreglar. No s\xE9 si puedo entrar. No s\xE9 si quiero. Pero aqu\xED estoy. Supongo
+    que aqu\xED estoy."
+  opciones: []
+  respuestas: []
