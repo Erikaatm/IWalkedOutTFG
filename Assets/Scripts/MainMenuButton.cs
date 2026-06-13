@@ -8,7 +8,10 @@ public class MainMenuButton : MonoBehaviour
         Time.timeScale = 1f;
         PauseController.SetPause(false);
         if (MenuController.Instance != null)
+        {
             MenuController.Instance.menuCanvas.SetActive(false);
+            Destroy(MenuController.Instance.gameObject);
+        }
         SceneManager.LoadScene(0);
     }
 }

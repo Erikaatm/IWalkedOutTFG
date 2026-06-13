@@ -190,6 +190,13 @@ public class MinijuegoCocina : MonoBehaviour
         return resuelto;
     }
 
+    public void ResetMinijuego()
+    {
+        resuelto = false;
+        dialogoTerminado = false;
+        ordenMetido.Clear();
+    }
+
     IEnumerator MostrarDialogoFinal()
     {
         yield return new WaitForSecondsRealtime(1.5f);

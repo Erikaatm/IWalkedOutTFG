@@ -53,6 +53,7 @@ public class MinijuegoPiano : MonoBehaviour
     public void Abrir()
     {
         if (panel == null || fondoOscuro == null) return;
+        bloqueado = false;
         PauseController.SetPause(true);
         panel.SetActive(true);
         fondoOscuro.SetActive(true);
@@ -81,6 +82,14 @@ public class MinijuegoPiano : MonoBehaviour
     public bool EstaResuelto()
     {
         return resuelto;
+    }
+
+    public void ResetMinijuego()
+    {
+        resuelto = false;
+        dialogoTerminado = false;
+        bloqueado = false;
+        notasMetidas.Clear();
     }
 
     void LimpiarSlots()

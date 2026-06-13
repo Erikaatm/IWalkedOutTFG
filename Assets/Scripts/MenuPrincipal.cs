@@ -16,6 +16,15 @@ public class MenuPrincipal : MonoBehaviour
 
     public void JugarNuevo()
     {
+        if (MinijuegoCocina.Instance != null)
+            MinijuegoCocina.Instance.ResetMinijuego();
+        if (MinijuegoPiano.Instance != null)
+            MinijuegoPiano.Instance.ResetMinijuego();
+        if (MenuController.Instance != null)
+            MenuController.Instance.menuCanvas.SetActive(false);
+        SaveController save = FindObjectOfType<SaveController>();
+        if (save != null)
+            save.dialogoLobbyVisto = false;
         StartCoroutine(FadeYJugar(true));
     }
 
@@ -77,6 +86,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void Salir()
     {
+        gameObject.SetActive(false);
         Application.Quit();
     }
 
