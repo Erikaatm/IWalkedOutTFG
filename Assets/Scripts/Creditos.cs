@@ -22,22 +22,9 @@ public class Creditos : MonoBehaviour
 
     void Start()
     {
-        posicionFinal = contenedorCrawl.rect.height + 600f;
         panelTitulo.SetActive(false);
         if (textoSaltar != null) textoSaltar.gameObject.SetActive(true);
-
-        // Comprueba si el crawl ya se vio
-        string path = System.IO.Path.Combine(Application.persistentDataPath, "saveData.json");
-        if (System.IO.File.Exists(path))
-        {
-            SaveData data = JsonUtility.FromJson<SaveData>(System.IO.File.ReadAllText(path));
-            if (data.introVista)
-            {
-                terminado = true;
-                StartCoroutine(MostrarTitulo());
-                return;
-            }
-        }
+        StartCoroutine(IniciarCrawl());
     }
 
     void Update()
@@ -60,10 +47,29 @@ public class Creditos : MonoBehaviour
             tiempoManteniendoSpace = 0f;
         }
 
-        if (contenedorCrawl.anchoredPosition.y >= posicionFinal)
+        if (!terminado && contenedorCrawl.anchoredPosition.y >= posicionFinal)
         {
             terminado = true;
             StartCoroutine(MostrarTitulo());
+        }
+    }
+
+    IEnumerator IniciarCrawl()
+    {
+        yield return null;
+        Canvas.ForceUpdateCanvases();
+        posicionFinal = contenedorCrawl.rect.height + Screen.height;
+
+        string path = System.IO.Path.Combine(Application.persistentDataPath, "saveData.json");
+        if (System.IO.File.Exists(path))
+        {
+            SaveData data = JsonUtility.FromJson<SaveData>(System.IO.File.ReadAllText(path));
+            if (data.introVista)
+            {
+                terminado = true;
+                StartCoroutine(MostrarTitulo());
+                yield break;
+            }
         }
     }
 

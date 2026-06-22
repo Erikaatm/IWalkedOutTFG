@@ -783,15 +783,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6495817451768696926, guid: 20c81fbcc067214478c2a63994904012, type: 3}
       propertyPath: titulo
-      value: 'Partitura '
+      value: Papel
       objectReference: {fileID: 0}
     - target: {fileID: 6495817451768696926, guid: 20c81fbcc067214478c2a63994904012, type: 3}
       propertyPath: descripcion
-      value: "Otro trozo de partitura, con m\xE1s tachaduras que los otros. \"Sol,
-        La, Sol, Mi, Do. Llegu\xE9 hasta aqu\xED. A veces uno no sabe cu\xE1ndo ha
-        terminado algo hasta que lo escucha de fuera. Supongo que algunas cosas necesitan
-        que est\xE9s t\xFA delante para acabar de cobrar sentido. Te lo toco cuando
-        vuelvas."
+      value: "- Otro trozo de papel, este m\xE1s limpio. Como si lo hubiera escrito
+        con m\xE1s calma, sin prisas. - Mi, Re, Do, Re, Mi. Aqu\xED es donde baja.
+        Estuve tres d\xEDas atascado en esta parte. No sab\xEDa c\xF3mo hacer que
+        la melod\xEDa respirara sin perder lo que hab\xEDa construido antes. Al final
+        lo entend\xED una noche que te escuch\xE9 llegar a casa tarde y no entr\xE9
+        a decirte nada. Me qued\xE9 sentado al piano en silencio y lo toqu\xE9 despacio.
+        Y sali\xF3 solo. A veces las cosas m\xE1s dif\xEDciles de componer son las
+        que m\xE1s te conocen."
       objectReference: {fileID: 0}
     - target: {fileID: 6495817451768696926, guid: 20c81fbcc067214478c2a63994904012, type: 3}
       propertyPath: interactuableID
@@ -1617,11 +1620,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6495817451768696926, guid: 20c81fbcc067214478c2a63994904012, type: 3}
       propertyPath: titulo
-      value: Papel arrugado
+      value: Partitura
       objectReference: {fileID: 0}
     - target: {fileID: 6495817451768696926, guid: 20c81fbcc067214478c2a63994904012, type: 3}
       propertyPath: descripcion
-      value: "- Otro trozo de partitura. Este con m\xE1s tachaduras que los otros,
+      value: "- Un trozo de partitura. Este con m\xE1s tachaduras que los otros,
         como si hubiera dudado mucho. - Sol, La, Sol, Mi, Do. Llegu\xE9 hasta aqu\xED.
         No s\xE9 si es suficiente o si le falta algo todav\xEDa. A veces uno mismo
         no sabe cu\xE1ndo ha terminado algo hasta que lo escucha de fuera. Supongo
@@ -3138,13 +3141,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2256851942778128606, guid: b3c52f3ef42928041a6ee03755c0736b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 888294720}
-    - targetCorrespondingSourceObject: {fileID: 2256851942778128606, guid: b3c52f3ef42928041a6ee03755c0736b, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 888294719}
-    - targetCorrespondingSourceObject: {fileID: 6851773800492503153, guid: b3c52f3ef42928041a6ee03755c0736b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1617409875}
   m_SourcePrefab: {fileID: 100100000, guid: b3c52f3ef42928041a6ee03755c0736b, type: 3}
 --- !u!1 &888294718 stripped
 GameObject:
@@ -3197,20 +3194,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.6367518, y: 0.24429893}
   m_EdgeRadius: 0
---- !u!114 &888294720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 888294718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 633e362014163e1408e855ea72bdac54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicSorting
-  player: {fileID: 1940706185}
-  yOffset: -1
 --- !u!4 &888294721 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3366018634163621334, guid: b3c52f3ef42928041a6ee03755c0736b, type: 3}
@@ -3910,25 +3893,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4493662441253912353, guid: c2d34f73e0156674e8742736dd83ea5b, type: 3}
   m_PrefabInstance: {fileID: 1573820863}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1617409872 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6851773800492503153, guid: b3c52f3ef42928041a6ee03755c0736b, type: 3}
-  m_PrefabInstance: {fileID: 888294717}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1617409875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617409872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 633e362014163e1408e855ea72bdac54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicSorting
-  player: {fileID: 1940706185}
-  yOffset: -1
 --- !u!1 &1654186886
 GameObject:
   m_ObjectHideFlags: 0
