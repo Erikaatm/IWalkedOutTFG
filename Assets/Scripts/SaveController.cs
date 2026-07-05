@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,13 +9,8 @@ public class SaveController : MonoBehaviour
     public string escenaAnterior = "";
     public List<int> interrogacionesDesactivadas = new List<int>();
 
-    private string saveLocation;
     private PulsoManager pulsoManager;
 
-    void Awake()
-    {
-        saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
-    }
 
     void OnEnable()
     {
@@ -51,14 +45,15 @@ public class SaveController : MonoBehaviour
             escenaAnterior = escenaAnterior,
             interrogacionesDesactivadas = interrogacionesDesactivadas
         };
-        File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));
+        PlayerPrefs.SetString("saveData", JsonUtility.ToJson(saveData));
+        PlayerPrefs.Save();
     }
 
     public void LoadGame()
     {
-        if (File.Exists(saveLocation))
+        if (PlayerPrefs.HasKey("saveData"))
         {
-            SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation));
+            SaveData saveData = JsonUtility.FromJson<SaveData>(PlayerPrefs.GetString("saveData"));
 
             if (SceneManager.GetActiveScene().name == "Lobby")
             {
@@ -115,9 +110,9 @@ public class SaveController : MonoBehaviour
 
     private Vector3 CargarPosicionGuardada()
     {
-        if (File.Exists(saveLocation))
+        if (PlayerPrefs.HasKey("saveData"))
         {
-            SaveData data = JsonUtility.FromJson<SaveData>(File.ReadAllText(saveLocation));
+            SaveData data = JsonUtility.FromJson<SaveData>(PlayerPrefs.GetString("saveData"));
             return data.playerPosition;
         }
         return Vector3.zero;

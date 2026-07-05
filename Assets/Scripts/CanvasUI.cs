@@ -18,10 +18,6 @@ public class CanvasUI : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
-    void OnDestroy()
-    {
-        Debug.Log("CanvasUI DESTRUIDO: " + gameObject.name);
-    }
 
     void OnEnable()
     {

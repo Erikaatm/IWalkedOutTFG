@@ -11,10 +11,6 @@ public class FinLobby : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("Cocina resuelta: " + MinijuegoCocina.Instance.EstaResuelto() +
-          " Piano resuelto: " + MinijuegoPiano.Instance.EstaResuelto() +
-          " Cocina dialogo: " + MinijuegoCocina.Instance.DialogoTerminado() +
-          " Piano dialogo: " + MinijuegoPiano.Instance.DialogoTerminado());
         if (activado) return;
         if (MinijuegoCocina.Instance.EstaResuelto() &&
         MinijuegoPiano.Instance.EstaResuelto() &&

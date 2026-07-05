@@ -41,10 +41,6 @@ public class MinijuegoCocina : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
-    {
-        Debug.Log("MinijuegoCocina DESTRUIDO");
-    }
 
     private void Start()
     {

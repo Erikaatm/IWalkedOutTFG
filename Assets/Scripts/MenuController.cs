@@ -1,4 +1,5 @@
 using UnityEngine;
+
 public class MenuController : MonoBehaviour
 {
     public static MenuController Instance;
@@ -20,9 +21,21 @@ public class MenuController : MonoBehaviour
         {
             if (!menuCanvas.activeSelf && PauseController.IsGamePaused)
                 return;
-
             menuCanvas.SetActive(!menuCanvas.activeSelf);
             PauseController.SetPause(menuCanvas.activeSelf);
         }
+    }
+
+    void OnDestroy()
+    {
+        if (Instance == this)
+            Instance = null;
+    }
+
+    public void Salir()
+    {
+        menuCanvas.SetActive(false);
+        Time.timeScale = 1f;
+        PauseController.SetPause(false);
     }
 }

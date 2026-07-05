@@ -139,7 +139,6 @@ public class IntroManager : MonoBehaviour
     void FinishIntro()
     {
         irisPanel.gameObject.SetActive(false);
-        Debug.Log("Intro terminada. Control al jugador.");
         this.gameObject.SetActive(false);
     }
 

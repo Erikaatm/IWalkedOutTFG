@@ -6,9 +6,10 @@ using UnityEngine.UI;
 
 public class Creditos : MonoBehaviour
 {
-    public RectTransform contenedorCrawl;
     public float velocidad = 80f;
     public string nombreEscenaSiguiente = "Lobby";
+    public RectTransform contenedorCrawl;
+    public RectTransform textoContenido;
     public GameObject panelTitulo;
     public RectTransform textoTitulo;
     public TMP_Text textoSaltar;
@@ -30,7 +31,6 @@ public class Creditos : MonoBehaviour
     void Update()
     {
         if (terminado) return;
-
         contenedorCrawl.anchoredPosition += Vector2.up * velocidad * Time.deltaTime;
 
         if (Input.GetKey(KeyCode.Space))
@@ -46,30 +46,35 @@ public class Creditos : MonoBehaviour
         {
             tiempoManteniendoSpace = 0f;
         }
-
-        if (!terminado && contenedorCrawl.anchoredPosition.y >= posicionFinal)
-        {
-            terminado = true;
-            StartCoroutine(MostrarTitulo());
-        }
     }
 
     IEnumerator IniciarCrawl()
     {
-        yield return null;
-        Canvas.ForceUpdateCanvases();
-        posicionFinal = contenedorCrawl.rect.height + Screen.height;
+        float posInicial = contenedorCrawl.anchoredPosition.y;
+        LayoutRebuilder.ForceRebuildLayoutImmediate(textoContenido);
+        yield return new WaitUntil(() => textoContenido.rect.height > 0);
 
-        string path = System.IO.Path.Combine(Application.persistentDataPath, "saveData.json");
-        if (System.IO.File.Exists(path))
+        float alturaCanvas = contenedorCrawl.GetComponentInParent<Canvas>()
+                                .GetComponent<RectTransform>().rect.height;
+        float posFinal = posInicial + textoContenido.rect.height + alturaCanvas;
+
+        if (PlayerPrefs.HasKey("saveData"))
         {
-            SaveData data = JsonUtility.FromJson<SaveData>(System.IO.File.ReadAllText(path));
+            SaveData data = JsonUtility.FromJson<SaveData>(PlayerPrefs.GetString("saveData"));
             if (data.introVista)
             {
                 terminado = true;
                 StartCoroutine(MostrarTitulo());
                 yield break;
             }
+        }
+
+        yield return new WaitUntil(() => terminado || contenedorCrawl.anchoredPosition.y >= posFinal);
+
+        if (!terminado)
+        {
+            terminado = true;
+            StartCoroutine(MostrarTitulo());
         }
     }
 
@@ -107,13 +112,13 @@ public class Creditos : MonoBehaviour
             yield return null;
         }
 
-        string path = System.IO.Path.Combine(Application.persistentDataPath, "saveData.json");
-        if (System.IO.File.Exists(path))
+        if (PlayerPrefs.HasKey("saveData"))
         {
-            SaveData data = JsonUtility.FromJson<SaveData>(System.IO.File.ReadAllText(path));
+            SaveData data = JsonUtility.FromJson<SaveData>(PlayerPrefs.GetString("saveData"));
             data.introVista = true;
             data.escenaAnterior = "EscenaIntro";
-            System.IO.File.WriteAllText(path, JsonUtility.ToJson(data));
+            PlayerPrefs.SetString("saveData", JsonUtility.ToJson(data));
+            PlayerPrefs.Save();
         }
 
         yield return new WaitForSeconds(0.2f);
